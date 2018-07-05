@@ -1,0 +1,19 @@
+doctype
+html
+    head
+        title React Server Side Rendering Example
+        meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
+        meta(charset="UTF-8")
+        include includes/a.html
+        link(rel="stylesheet" type="text/css" href=staticSources['example.css'])
+    body
+        div(id='container')
+            !=react
+        
+        script(type='text/javascript').
+            window.__INITIAL_STATE__ = !{state};
+            window.config = {
+                ismobile: true
+            }
+        script(src=staticSources['libs.js'])
+        script(src=staticSources['example.js'])
