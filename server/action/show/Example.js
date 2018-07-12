@@ -35,19 +35,21 @@ class Example extends bun.$_appname {
         // const store = this.Example_Index.configureStore(initialState);
         global.window.config.ismobile = true;
 
-        bun.SSR(ctx, this.Example_Index.routesConfig, this.Example_Index.configureStore, initialState, async (renderHtml) => {
-            
+        bun.SSR({
+            ctx, 
+            routesconfig: this.Example_Index.routesConfig, 
+            configureStore: this.Example_Index.configureStore, 
+            initialState
+        }, async (renderHtml) => {
             if (renderHtml) {
                 await ctx.render('example',{
                     react: renderHtml,
                     state: JSON.stringify(state)
                 });
-                
             } else {
                 ctx.status = 404;
                 ctx.body = 'Not found';
             }
-            
         });
         
     }
