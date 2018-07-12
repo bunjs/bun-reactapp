@@ -24,7 +24,7 @@ class PageOne extends React.Component {
         };
     }
     linkClick(e) {
-        this.props.history.push('/ssrtest/example')
+        this.props.history.push('/$_appname/example')
     }
     render() {
         return (

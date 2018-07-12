@@ -36,7 +36,7 @@ class Home extends React.Component {
         });
     }
     linkClick(e) {
-        this.props.history.push('/ssrtest/example/one')
+        this.props.history.push('/$_appname/example/one')
     }
     render() {
         return (
