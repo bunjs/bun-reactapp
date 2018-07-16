@@ -5,6 +5,7 @@ html
         meta(name="viewport",content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no")
         meta(charset="UTF-8")
         include includes/a.html
+        link(rel="stylesheet" type="text/css" href=staticSources['vendors.css'])
         link(rel="stylesheet" type="text/css" href=staticSources['example.css'])
     body
         div(id='container')
@@ -15,5 +16,5 @@ html
             window.config = {
                 ismobile: true
             }
-        script(src=staticSources['libs.js'])
+        script(src=staticSources['vendors.js'])
         script(src=staticSources['example.js'])

@@ -13,7 +13,7 @@ class App extends React.Component {
     }
     render() {
         const {route} = this.props;
-        return (<div><h1>App</h1>{renderRoutes(route.routes)}</div>)
+        return (<div><h1>Bunjs is ready!</h1>{renderRoutes(route.routes)}</div>)
     }
 }
 // const App=({store, history})=>(
