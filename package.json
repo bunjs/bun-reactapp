@@ -1,35 +1,57 @@
 {
-  "name": "$_appname",
-  "version": "1.0.0",
-  "description": "",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "author": "",
-  "license": "ISC",
-  "dependencies": {
-    "@babel/core": "^7.1.2",
-    "@babel/polyfill": "^7.0.0",
-    "@babel/preset-env": "^7.1.0",
-    "babel-loader": "^8.0.4",
-    "antd": "^3.6.3",
-    "babel-plugin-import": "^1.8.0",
-    "babel-preset-react": "^6.24.1",
-    "css-loader": "^0.28.11",
-    "isomorphic-fetch": "^2.2.1",
-    "json-loader": "^0.5.7",
-    "less": "^3.0.4",
-    "less-loader": "^4.1.0",
-    "postcss-loader": "^2.1.3",
-    "react": "^16.4.0",
-    "react-dom": "^16.4.0",
-    "react-redux": "^5.0.7",
-    "react-router-config": "^1.0.0-beta.4",
-    "react-router-dom": "^4.2.2",
-    "react-router-redux": "^4.0.8",
-    "redux": "^4.0.0",
-    "redux-thunk": "^2.2.0",
-    "style-loader": "^0.20.3",
-    "url-loader": "^1.0.1"
-  }
+    "name": "$_appname",
+    "version": "1.0.0",
+    "description": "",
+    "scripts": {
+        "test": "echo \"Error: no test specified\" && exit 1"
+    },
+    "author": "",
+    "husky": {
+        "hooks": {
+            "pre-commit": "lint-staged"
+        }
+    },
+    "lint-staged": {
+        "*.{js,jsx}": [
+            "prettier --tab-width 4 --write",
+            "eslint --fix",
+            "git add"
+        ]
+    },
+    "license": "ISC",
+    "dependencies": {
+        "@babel/core": "^7.1.2",
+        "@babel/polyfill": "^7.0.0",
+        "@babel/preset-env": "^7.1.0",
+        "babel-loader": "^8.0.4",
+        "@babel/plugin-proposal-decorators": "^7.4.4",
+        "core-js": "^3.0.1",
+        "antd": "^3.6.3",
+        "babel-plugin-import": "^1.8.0",
+        "babel-preset-react": "^6.24.1",
+        "css-loader": "^0.28.11",
+        "isomorphic-fetch": "^2.2.1",
+        "json-loader": "^0.5.7",
+        "less": "^3.0.4",
+        "less-loader": "^4.1.0",
+        "postcss-loader": "^2.1.3",
+        "react": "^16.4.0",
+        "react-dom": "^16.4.0",
+        "react-redux": "^5.0.7",
+        "react-router-config": "^1.0.0-beta.4",
+        "react-router-dom": "^4.2.2",
+        "react-router-redux": "^4.0.8",
+        "redux": "^4.0.0",
+        "redux-thunk": "^2.2.0",
+        "style-loader": "^0.20.3",
+        "url-loader": "^1.0.1"
+    },
+    "devDependencies": {
+        "babel-eslint": "^10.0.1",
+        "eslint": "^5.16.0",
+        "eslint-plugin-vue": "^5.2.2",
+        "husky": "^2.2.0",
+        "lint-staged": "^8.1.6",
+        "prettier": "1.17.0"
+    }
 }

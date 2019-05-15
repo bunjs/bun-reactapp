@@ -3,7 +3,7 @@
  * @desc 获取前端路由对应的model层类名
  */
 
-class Services_DataStation extends bun.$_appname{
+class Services_DataStation extends bun.class.$_appname{
     constructor() {
         super();
         this.interfaceMapping = {

@@ -11,7 +11,7 @@
  * react应用ssr demo
  */
 
-class Example extends bun.$_appname {
+class Example extends bun.class.$_appname {
     constructor() {
         super();
         this.a = 1;
@@ -37,8 +37,8 @@ class Example extends bun.$_appname {
 
         bun.SSR({
             ctx, 
-            routesconfig: this.Example_Index.routesConfig, 
-            configureStore: this.Example_Index.configureStore, 
+            routesconfig: this.Base_Index.routesConfig, 
+            configureStore: this.Base_Index.configureStore, 
             initialState
         }, async (renderHtml) => {
             if (renderHtml) {

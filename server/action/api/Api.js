@@ -1,4 +1,4 @@
-class Api extends bun.$_appname {
+class Api extends bun.class.$_appname {
     constructor() {
         super();
         this.a = 1;

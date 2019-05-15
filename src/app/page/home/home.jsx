@@ -1,24 +1,28 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-import { actionLogin } from './action.js';
+import { actionHome } from './action.js';
 import { connect } from 'react-redux';
-// import { browserHistory } from 'react-router';
-// import createHistory from 'history/createBrowserHistory';
-// let history=createHistory();
-// import 'antd/lib/button/style';
 import { Button, Menu, Icon } from 'antd';
 const SubMenu = Menu.SubMenu;
 const MenuItemGroup = Menu.ItemGroup;
-// import Button from 'antd/lib/button';
 import { Link } from 'react-router-dom';
-// import createHistory from 'history/createBrowserHistory';
-// let history=createHistory();
 import './style.less';
 const styles = {
     
 };
+function mapStateToProps(state) {
+    return {
+        value: state.home
+    };
+}
+function mapDispatchToProps(dispatch) {
+    return {
+        actionHome: (data) => dispatch(actionHome(data))
+    };
+}
 
-class Home extends React.Component {
+@connect(mapStateToProps, mapDispatchToProps)
+export default class Home extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -36,7 +40,7 @@ class Home extends React.Component {
         });
     }
     linkClick(e) {
-        this.props.history.push('/$_appname/example/one')
+        this.props.history.push('/$_appname/one')
     }
     render() {
         return (
@@ -63,18 +67,8 @@ class Home extends React.Component {
         );
     }
 };
-function mapStateToProps(state) {
-  return {
-    value: state.home
-  };
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    actionHome: (data) => dispatch(actionHome(data))
-  };
-}
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(Home);
-// module.exports = Login;
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(Home);

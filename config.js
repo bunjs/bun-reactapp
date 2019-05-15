@@ -13,5 +13,8 @@ module.exports = {
 	libs: [],// 需要额外打包的公共库
 	uglifyJs: true, // 开发模式下无效
 	optimizeCSS: true,// 开发模式下无效
-	supportFileType: ['jsx', 'less']// 需要支持的文件格式
+	supportFileType: ['jsx', 'less'],// 需要支持的文件格式
+	globalPath: {
+        '@common': './src/app/common'
+    }
 }

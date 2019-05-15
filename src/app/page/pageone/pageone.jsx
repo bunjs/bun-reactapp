@@ -1,6 +1,6 @@
 import React from 'react';
 import fetch from 'isomorphic-fetch';
-import { actionLogin } from './action.js';
+import { actionPageOne } from './action.js';
 import { connect } from 'react-redux';
 // import { browserHistory } from 'react-router';
 // import createHistory from 'history/createBrowserHistory';
@@ -12,8 +12,19 @@ import { Button } from 'antd';
 // let history=createHistory();
 
 const styles = {};
+function mapStateToProps(state) {
+  return {
+    value: state.pageone
+  };
+}
+function mapDispatchToProps(dispatch) {
+  return {
+    actionPageOne: (data) => dispatch(actionPageOne(data))
+  };
+}
 
-class PageOne extends React.Component {
+@connect(mapStateToProps, mapDispatchToProps)
+export default class PageOne extends React.Component {
     constructor(props) {
         super(props);
         this.state = {
@@ -24,7 +35,7 @@ class PageOne extends React.Component {
         };
     }
     linkClick(e) {
-        this.props.history.push('/$_appname/example')
+        this.props.history.push('/$_appname')
     }
     render() {
         return (
@@ -35,18 +46,9 @@ class PageOne extends React.Component {
         );
     }
 };
-function mapStateToProps(state) {
-  return {
-    value: state.pageone
-  };
-}
-function mapDispatchToProps(dispatch) {
-  return {
-    actionHome: (data) => dispatch(actionHome(data))
-  };
-}
-export default connect(
-  mapStateToProps,
-  mapDispatchToProps
-)(PageOne);
+
+// export default connect(
+//   mapStateToProps,
+//   mapDispatchToProps
+// )(PageOne);
 // module.exports = Login;

@@ -1,4 +1,4 @@
-class Controller_Main extends bun.$_appname {
+class Controller_Main extends bun.class.$_appname {
     constructor() {
         super();
         global.navigator = global.navigator || {};
@@ -13,7 +13,7 @@ class Controller_Main extends bun.$_appname {
             '/api': '/action/api/Api.js'
         });
         this.Routes.get({
-            '/example/*': '/action/show/Example.js',
+            '/*': '/action/show/Example.js',
         });
     }   
 }

@@ -3,7 +3,7 @@ import {hydrate, render} from 'react-dom';
 import { BrowserRouter,Switch } from 'react-router-dom';
 import { renderRoutes } from 'react-router-config';
 import { Provider } from 'react-redux';
-const { configureStore, routesConfig } = require('../app/example/index.js');
+const { configureStore, routesConfig } = require('../app/index.js');
 import createHistory from 'history/createBrowserHistory';
 let history=createHistory();
 // injectTapEventPlugin();

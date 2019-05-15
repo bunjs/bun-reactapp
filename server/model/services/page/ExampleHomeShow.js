@@ -1,4 +1,4 @@
-class Services_Page_ExampleHomeShow extends bun.$_appname{
+class Services_Page_ExampleHomeShow extends bun.class.$_appname{
     constructor() {
         super();
     }
