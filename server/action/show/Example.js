@@ -35,7 +35,7 @@ class Example extends bun.class.$_appname {
         // const store = this.Example_Index.configureStore(initialState);
         global.window.config.ismobile = true;
 
-        bun.SSR({
+        bun.plugins.SSR({
             ctx, 
             routesconfig: this.Base_Index.routesConfig, 
             configureStore: this.Base_Index.configureStore, 
