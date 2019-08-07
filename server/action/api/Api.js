@@ -1,11 +1,11 @@
-class Api extends bun.class.$_appname {
+class Action_Api_Api extends bun.class.$_appname {
     constructor() {
         super();
         this.a = 1;
         
     }
     async execute(ctx) {
-        let objServiceData = new this.Services_Data_ApiData()
+        let objServiceData = new Model_Services_Data_ApiData()
         
         let bsCommon = {}
         bsCommon['type'] = ctx.request.query.type || 'home';
@@ -16,4 +16,4 @@ class Api extends bun.class.$_appname {
     }
 }
 
-module.exports = Api;
+module.exports = Action_Api_Api;

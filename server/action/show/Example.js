@@ -11,7 +11,7 @@
  * react应用ssr demo
  */
 
-class Example extends bun.class.$_appname {
+class Action_Show_Example extends bun.class.$_appname {
     constructor() {
         super();
         this.a = 1;
@@ -24,7 +24,7 @@ class Example extends bun.class.$_appname {
             pageone: ''
         };
         // 获取各前端路由对应的model层入口
-        let dataClassName = new this.Services_DataStation().getClassName(ctx.path);
+        let dataClassName = new Model_Services_DataStation().getClassName(ctx.path);
         let objServicePageData = new this[dataClassName]().execute(bsCommon);
         
         
@@ -55,4 +55,4 @@ class Example extends bun.class.$_appname {
     }
 }
 
-module.exports = Example;
+module.exports = Action_Show_Example;

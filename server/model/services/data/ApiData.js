@@ -1,4 +1,4 @@
-class Services_Data_ApiData{
+class Model_Services_Data_ApiData{
     constructor() {
         this.a = 1;
         
@@ -11,4 +11,4 @@ class Services_Data_ApiData{
     }
 }
 
-module.exports = Services_Data_ApiData;
+module.exports = Model_Services_Data_ApiData;
