@@ -1,4 +1,4 @@
-class Model_Services_Page_ExampleOneShow extends bun.class.$_appname{
+class Model_Services_Page_ExampleOneShow extends bun.class['$_appname'] {
     constructor() {
         super();
     }

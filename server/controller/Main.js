@@ -1,4 +1,4 @@
-class Controller_Main extends bun.class.$_appname {
+class Controller_Main extends bun.class['$_appname'] {
     constructor() {
         super();
         global.navigator = global.navigator || {};
