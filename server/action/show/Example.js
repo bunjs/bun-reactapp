@@ -33,12 +33,12 @@ class Action_Show_Example extends bun.class['$_appname'] {
 
         const initialState = state;
         // const store = this.Example_Index.configureStore(initialState);
-        global.window.config.ismobile = true;
+        // global.window.config.ismobile = true;
+        let serverRenderPath = bun.globalPath.ROOT_PATH + '/static/$_appname/server-bundle.min.js';
 
         bun.plugins.SSR({
-            ctx, 
-            routesconfig: this.Base_Index.routesConfig, 
-            configureStore: this.Base_Index.configureStore, 
+            ctx,
+            serverRenderPath,
             initialState
         }, async (renderHtml) => {
             if (renderHtml) {
@@ -51,7 +51,6 @@ class Action_Show_Example extends bun.class['$_appname'] {
                 ctx.body = 'Not found';
             }
         });
-        
     }
 }
 

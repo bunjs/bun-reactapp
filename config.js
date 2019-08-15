@@ -1,6 +1,7 @@
 module.exports = {
     dirname: __dirname,
     isbun: true,
+    ssr: true,
     entry: {
         index: './src/entry/index.js'
     },
