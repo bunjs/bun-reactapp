@@ -24,8 +24,8 @@ class Action_Show_Example extends bun.class['$_appname'] {
             pageone: ''
         };
         // 获取各前端路由对应的model层入口
-        let dataClassName = new Model_Services_DataStation().getClassName(ctx.path);
-        let objServicePageData = new this[dataClassName]().execute(bsCommon);
+        let dataClass = new Model_Services_DataStation().getClassName(ctx.path);
+        let objServicePageData = new dataClass().execute(bsCommon);
         
         bsCommon['type'] = ctx.request.query.type || 'a';
         state = Object.assign(state, objServicePageData);

@@ -7,8 +7,8 @@ class Model_Services_DataStation extends bun.class['$_appname'] {
     constructor() {
         super();
         this.interfaceMapping = {
-            '/': 'Model_Services_Page_ExampleHomeShow',
-            '/one': 'Model_Services_Page_ExampleOneShow'
+            '/': Model_Services_Page_ExampleHomeShow,
+            '/one': Model_Services_Page_ExampleOneShow
         };
     }
     getClassName(path) {
