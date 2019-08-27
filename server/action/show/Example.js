@@ -27,29 +27,14 @@ class Action_Show_Example extends bun.class['$_appname'] {
         let dataClassName = new Model_Services_DataStation().getClassName(ctx.path);
         let objServicePageData = new this[dataClassName]().execute(bsCommon);
         
-        
         bsCommon['type'] = ctx.request.query.type || 'a';
         state = Object.assign(state, objServicePageData);
 
         const initialState = state;
-        // const store = this.Example_Index.configureStore(initialState);
-        // global.window.config.ismobile = true;
-        let serverRenderPath = bun.globalPath.ROOT_PATH + '/static/$_appname/server-bundle.min.js';
 
-        bun.plugins.SSR({
-            ctx,
-            serverRenderPath,
-            initialState
-        }, async (renderHtml) => {
-            if (renderHtml) {
-                await ctx.render('example',{
-                    react: renderHtml,
-                    state: JSON.stringify(state)
-                });
-            } else {
-                ctx.status = 404;
-                ctx.body = 'Not found';
-            }
+        await ctx.render('example',{
+            message: 'Bunjs is ready!',
+            state: JSON.stringify(state)
         });
     }
 }

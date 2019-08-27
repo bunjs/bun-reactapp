@@ -1,7 +1,7 @@
 module.exports = {
     dirname: __dirname,
     isbun: true,
-    ssr: true,
+    ssr: false,
     entry: {
         index: './src/entry/index.js'
     },
@@ -9,7 +9,7 @@ module.exports = {
     template: '',
     appname: '$_appname',
     localStaticDomain: '//localhost:8000',
-    publicStaticDomain: '//gh.bdstatic.com',
+    publicStaticDomain: '//localhost:8000',
     manifest: true,
     /**
      * 分离模式
